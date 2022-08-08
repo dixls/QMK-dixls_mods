@@ -4,7 +4,7 @@
         "pid": "0x1835",
     },
     "layouts": {
-        "LAYOUT_split_3x5_2": {
+        "LAYOUT_split_3x5_3": {
             "layout": [
                 {"label":"L00", "x":0, "y":0},
                 {"label":"L01", "x":1, "y":0},
@@ -38,6 +38,8 @@
                 {"label":"R24", "x":15, "y":2},
                 {"label":"L30", "x":4, "y":3},
                 {"label":"L32", "x":5, "y":3},
+                {"label":"L33", "x":5, "y":3},
+                {"label":"R33", "x":10, "y":3},
                 {"label":"R32", "x":10, "y":3},
                 {"label":"R30", "x":11, "y":3}
             ]
