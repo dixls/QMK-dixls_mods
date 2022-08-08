@@ -1,7 +1,7 @@
 {
     "url": "https://bastardkb.com/dilemma",
     "usb": {
-        "pid": "0x1835",
+        "pid": "0x1835"
     },
     "layouts": {
         "LAYOUT_split_3x5_3": {
