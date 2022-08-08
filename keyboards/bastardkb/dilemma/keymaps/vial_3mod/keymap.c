@@ -15,6 +15,7 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include QMK_KEYBOARD_H
+#include "/home/pixls/qmk_firmware/users/manna-harbour_miryoku/manna-harbour_miryoku.h"
 
 #ifdef DILEMMA_AUTO_POINTER_LAYER_TRIGGER_ENABLE
 #    include "timer.h"
@@ -27,6 +28,7 @@ enum dilemma_keymap_layers {
     LAYER_POINTER,
     LAYER_NUMERAL,
     LAYER_SYMBOLS,
+    LAYER_MEDIA
 };
 
 // Automatically enable sniping-mode on the pointer layer.
@@ -128,7 +130,7 @@ static uint16_t auto_pointer_layer_timer = 0;
     KC_LBRC,    KC_7,    KC_8,    KC_9, KC_RBRC,                   _______________DEAD_HALF_ROW_______________, \
     KC_SCLN,    KC_4,    KC_5,    KC_6,  KC_EQL,                   ______________HOME_ROW_GACS_R______________, \
      KC_GRV,    KC_1,    KC_2,    KC_3, KC_BSLS,                   _______________DEAD_HALF_ROW_______________, \
-                                KC_DOT,    KC_0, KC_MINS, _______, XXXXXXX, XXXXXXX,
+                                KC_DOT,    KC_0, KC_MINS, _______, XXXXXXX, XXXXXXX
 
 /**
  * \brief Symbols layer.
@@ -142,6 +144,17 @@ static uint16_t auto_pointer_layer_timer = 0;
     KC_COLN,  KC_DLR, KC_PERC, KC_CIRC, KC_PLUS,                   ______________HOME_ROW_GACS_R______________, \
     KC_TILD, KC_EXLM,   KC_AT, KC_HASH, KC_PIPE,                   _______________DEAD_HALF_ROW_______________, \
                                KC_LPRN, KC_RPRN, KC_UNDS, XXXXXXX, _______, XXXXXXX
+
+/**
+ * \brief Media layer.
+ * 
+ * Media layer
+ */
+#define LAYOUT_LAYER_MEDIA                                                                             \
+_______________DEAD_HALF_ROW_______________,                     RGB_TOG,  RGB_MOD,  RGB_HUI, RGB_SAI,  RGB_VAI, \
+______________HOME_ROW_GACS_L______________,                    OUT_AUTO,  KC_MPRV,  KC_VOLD, KC_VOLU,  KC_MNXT, \
+_______________DEAD_HALF_ROW_______________,                        U_NU,     U_NU,     U_NU,    U_NU,     U_NU, \
+                           _______, XXXXXXX, XXXXXXX,  KC_MSTP,  KC_MPLY,  KC_MUTE
 
 /**
  * \brief Add Home Row mod to a layout.
@@ -188,7 +201,7 @@ static uint16_t auto_pointer_layer_timer = 0;
       __VA_ARGS__
 #define POINTER_MOD(...) _POINTER_MOD(__VA_ARGS__)
 
-#define LAYOUT_wrapper(...) LAYOUT_split_3x5_2(__VA_ARGS__)
+#define LAYOUT_wrapper(...) LAYOUT_split_3x5_3(__VA_ARGS__)
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [LAYER_BASE] = LAYOUT_wrapper(
