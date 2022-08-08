@@ -26,7 +26,7 @@ POINTING_DEVICE_ENABLE = yes
 SERIAL_DRIVER = vendor
 
 SPLIT_KEYBOARD = yes
-LAYOUTS = split_3x5_2
+LAYOUTS = split_3x5_3
 
 DEFAULT_FOLDER = bastardkb/dilemma/splinky
 
