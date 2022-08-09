@@ -51,7 +51,7 @@ static uint16_t auto_pointer_layer_timer = 0;
 #define ENT_SYM LT(LAYER_SYMBOLS, KC_ENT)
 #define BSP_NUM LT(LAYER_NUMERAL, KC_BSPC)
 #define ESC_MED LT(LAYER_MEDIA, KC_ESC)
-#define DEL_FUN LT(LAYER_FUNCTION, KC_BSPC)
+#define DEL_FUN LT(LAYER_FUNCTION, KC_DEL)
 #define _L_PTR(KC) LT(LAYER_POINTER, KC)
 
 #ifndef POINTING_DEVICE_ENABLE
