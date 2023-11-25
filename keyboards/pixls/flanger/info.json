@@ -1,0 +1,8 @@
+{
+  "manufacturer": "pixls",
+  "maintainer": "pixls",
+  "usb": {
+    "vid": "0xFEED"
+  },
+  "community_layouts": ["ortho_4x12", "pretend_10col"]
+}
